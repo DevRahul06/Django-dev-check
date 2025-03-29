@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Vehicle Magnate
+{% endblock %}
+
+{% block content %}
+<div class="container-xxl  py-5">
+    <div class="container">
+        <div class="row g-4">
+            {% for v in vehicle %}
+                <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="card">
+                        <div class="p-4">
+                            <!-- Image -->
+                            <div align="center">
+                                <img src="{{ v.img.url }}" alt="img" height="266px">
+                            </div>
+                            
+                            <!-- Title -->
+                            <div class="mt-2">
+                                <h5>{{ v.title }}</h5>
+                            </div>
+                            
+                            <!-- Description -->
+                            <div>
+                                <p>{{ v.des }}</p>
+                            </div>
+                            <hr>
+                        </div>
+                    
+                    </div>
+                    
+                </div>
+            {% endfor %}
+            
+        </div>
+    </div>
+</div>
+
+{% endblock %}

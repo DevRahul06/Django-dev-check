@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block title %}
+Signage Dashboard
+{% endblock %}
+
+{% block content %}
+
+<main>
+    <section class="section hero-section">
+        <div class="owl-carousel home-slider">
+            <div class="item">
+                <div class="home-slider-img">
+                    <img src="../static/img/Slider-imgs/Slider-img-1.jpg" alt="">
+                </div>
+            </div>
+            <div class="item">
+                <div class="home-slider-img">
+                    <img src="../static/img/Slider-imgs/Slider-img-2.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-- Custom navigation buttons (moved outside the .owl-carousel) -->
+        <button class="home-prev home-nav-button">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="home-next home-nav-button">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+    </section>
+</main>
+
+ 
+{% endblock %}
+
+{% block footer %}{% endblock %}

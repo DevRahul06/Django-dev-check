@@ -1,0 +1,230 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Signage Ideas - Your one-stop solution for signage, banners, and printing needs.">
+    <meta name="keywords" content="signage, printing, banners, truck stickers, window signs, property signs">
+    <meta name="author" content="Signage Ideas Team">
+    <meta name="robots" content="index, follow">
+    
+    <title>{% block title %} Signage Ideas {% endblock %}</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="{% static 'css/NewStyle.css' %}" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+
+    <!-- Open Graph Meta Tags (for social media) -->
+    <meta property="og:title" content="Signage Ideas">
+    <meta property="og:description" content="Get high-quality signage, banners, and custom prints.">
+    <meta property="og:image" content="{% static 'img/og-image.jpg' %}">
+    <meta property="og:url" content="https://www.signage-ideas.com">
+    <meta property="og:type" content="website">
+  </head>
+
+  <body>
+    <!-- ====================== Navbar Section Start ====================== -->
+
+    <header class="header">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand logo" href="#">
+            <img src="../static/img/logo.png" alt="" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="navbarNavDropdown"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link {% if request.path == '/' %}active{% endif %}" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="/about/">About</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link {% if request.path == '/' %}active{% endif %}"
+                  href="{% url "paperprint" %}"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span>Products</span>
+                  <i class="fa-solid fa-angle-down"></i>
+
+
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="{% url "paperprint" %}">Paper Prints</a></li>
+                  <li><a class="dropdown-item" href="#">Banner</a></li>
+                  <li><a class="dropdown-item" href="#">Flag</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Truck sign/Sticker</a>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Window Sign</a></li>
+                  <li><a class="dropdown-item" href="#">3D letter</a></li>
+                  <li><a class="dropdown-item" href="#">Property Signs</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact US</a>
+              </li>
+            </ul>
+
+            <div class="navbrIcon-section">
+              <a href="" class="Navbar"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="" class="Navbar"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a href="" class="Navbar"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ====================== Navbar Section End ====================== -->
+
+    {% block content %}{% endblock %}
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <h3 class="footer-title">Shortcuts</h3>
+            <ul class="footer-nav-list">
+              <li class="footer-nav-item">
+                <a href="" class="footer-nav-link">Home</a>
+              </li>
+              <li class="footer-nav-item">
+                <a href="" class="footer-nav-link">About</a>
+              </li>
+              <li class="footer-nav-item">
+                <a href="" class="footer-nav-link">Work Gallary</a>
+              </li>
+              <li class="footer-nav-item">
+                <a href="" class="footer-nav-link">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <h3 class="footer-title">Service Areas</h3>
+            <ul class="footer-nav-list">
+              <li class="footer-nav-item">
+                <a href="" class="footer-nav-link">Fontana</a>
+              </li>
+              <li class="footer-nav-item">
+                <a href="" class="footer-nav-link">Redlands</a>
+              </li>
+              <li class="footer-nav-item">
+                <a href="" class="footer-nav-link">Ontario</a>
+              </li>
+              <li class="footer-nav-item">
+                <a href="" class="footer-nav-link">Rialto</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <h3 class="footer-title">Construction Office</h3>
+            <ul class="footer-nav-list">
+              <li class="footer-nav-item contact-nav-link">
+                <i class="fa-solid fa-phone"></i>
+                <a href="" class="footer-nav-link">909-662-7239</a>
+              </li>
+              <li class="footer-nav-item contact-nav-link">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:ideassignage@gmail.com" class="footer-nav-link"
+                  >ideassignage@gmail.com</a
+                >
+              </li>
+              <li class="footer-nav-item contact-nav-link">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:usa@signage-ideas.com" class="footer-nav-link"
+                  >usa@signage-ideas.com</a
+                >
+              </li>
+              <li class="footer-nav-item contact-nav-link">
+                <i class="fa-solid fa-location-dot"></i>
+                <a href="" class="footer-nav-link"
+                  >9810 Sierra Ave Suite A2,Fontana,CA</a
+                >
+              </li>
+              <li class="footer-nav-item footer-Social-link">
+                <div class="footer-social-section">
+                  <a href=""><i class="fa-brands fa-twitter"></i></a>
+                  <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href=""><i class="fa-brands fa-youtube"></i></a>
+                  <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <h3 class="footer-title">Working Hourse</h3>
+            <div class="working-hourse-section">
+              <h4 class="working-hourse-section-title">Monday - Saturday</h4>
+              <p class="working-hourse-section-text">09:00 AM - 06:00 PM</p>
+            </div>
+            <div class="working-hourse-section">
+              <h4 class="working-hourse-section-title">Sunday</h4>
+              <p class="working-hourse-section-text">09:00 AM - 04:00 PM</p>
+            </div>
+
+            <a class="google-review-link"
+              href="https://www.google.com/maps/place/Signage+Ideas+-+Truck+sticker+%26+Decals/@34.0754659,-117.4364321,17z/data=!4m18!1m9!3m8!1s0x80c34df6695a692d:0x71db2f3617cd22ca!2sSignage+Ideas+-+Truck+sticker+%26+Decals!8m2!3d34.0755473!4d-117.436432!9m1!1b1!16s%2Fg%2F11h53lgs1z!3m7!1s0x80c34df6695a692d:0x71db2f3617cd22ca!8m2!3d34.0755473!4d-117.436432!9m1!1b1!16s%2Fg%2F11h53lgs1z?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D"
+            >
+              <i class="fa-brands fa-google"></i> <span>Google Reviews</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <!-- <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a> -->
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+
+    <!-- Template Javascript -->
+    <script src="static/js/main.js"></script>
+    <script src="static/js/main-jq.js"></script>
+  </body>
+</html>
